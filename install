@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# install dotfiles
+stow --target=$HOME --restow */
+
+# install VS Code extensions
+cat ~/Library/Application\ Support/Code/User/extensions.txt | xargs -L 1 code --install-extension
